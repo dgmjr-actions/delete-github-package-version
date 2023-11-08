@@ -1,0 +1,23 @@
+name: Delete GitHub Package Version
+author: David G. Moore, Jr., <david@dgmjr.io>
+description: Deletes a version of a package from the GitHub Package Registry
+
+branding:
+  icon: git-merge
+  color: green
+
+inputs:
+  repo:
+    description: 'The repo to build'
+    required: true
+  git-token:
+    description: 'The git token to use for the Packages repo'
+    required: true
+
+runs:
+  using: composite
+  steps:
+  - id: Checkout-the-repository-being-compiled
+    shell: pwsh
+    run: |
+      npm run build
