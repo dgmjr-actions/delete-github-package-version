@@ -19,12 +19,15 @@ inputs:
   package-version:
     description: 'The version of the package to delete'
     required: true
+    default: 0.0.1
   organization:
     description: 'The organization that owns the repo'
     required: true
+    default: dgmjr-io
   package-type:
     description: 'The type of package to delete'
     required: true
+    default: nuget
 
 runs:
   using: composite
