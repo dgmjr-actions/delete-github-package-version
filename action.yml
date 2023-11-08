@@ -13,11 +13,30 @@ inputs:
   git-token:
     description: 'The git token to use for the Packages repo'
     required: true
+  package-name:
+    description: 'The name of the package to delete'
+    required: true
+  package-version:
+    description: 'The version of the package to delete'
+    required: true
+  organization:
+    description: 'The organization that owns the repo'
+    required: true
+  package-type:
+    description: 'The type of package to delete'
+    required: true
 
 runs:
   using: composite
   steps:
-  - id: Checkout-the-repository-being-compiled
+  - id: Install-Node-modules
     shell: pwsh
-    run: |
-      npm run build
+    run: npm install
+  - id: Compile-the-TypeScript
+    shell: pwsh
+    run: tsc
+  - id: Delete-GitHub-Package-Version
+    shell: pwsh
+    run: node js/delete-github-package-version.js -org ${{ inputs.organization }} -i ${{ inputs.package-name }} -v "${{ inputs.package-version }}" -t ${{ inputs.package-type }} --token ${{ inputs.git-token }}
+    env:
+      GITHUB_TOKEN: ${{ inputs.git-token }}
