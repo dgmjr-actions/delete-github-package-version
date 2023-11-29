@@ -35,11 +35,10 @@ runs:
   - id: Install-Node-modules
     shell: pwsh
     run: npm install
-  - id: Compile-the-TypeScript
-    shell: pwsh
-    run: tsc
+    cwd: Scripts/ts
   - id: Delete-GitHub-Package-Version
     shell: pwsh
-    run: node js/delete-github-package-version.js -org ${{ inputs.organization }} -i ${{ inputs.package-name }} -v "${{ inputs.package-version }}" -t ${{ inputs.package-type }} --token ${{ inputs.git-token }}
+    run: ts-node-esm delete-github-package-version.ts --org ${{ inputs.organization }} --package-id ${{ inputs.package-name }} --version "${{ inputs.package-version }}" --type ${{ inputs.package-type }} --token ${{ inputs.git-token }}
+    cwd: Scripts/ts
     env:
       GITHUB_TOKEN: ${{ inputs.git-token }}

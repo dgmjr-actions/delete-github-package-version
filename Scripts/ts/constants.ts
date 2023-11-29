@@ -20,9 +20,3 @@ export const GITHUB_API_STANDARD_HEADERS = {
   [GITHUB_API_VERSION_HEADER_NAME]: GITHUB_API_VERSION,
   Accept: GITHUB_API_RESPONSE_CONTENT_TYPE
 };
-
-export const GitHubApiEndpoints = {
-  PackageVersions: "/orgs/{org}/packages/{package_type}/{package_name}/versions",
-  PackageByVersionId: "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}",
-  PackageByName: "/{org}/packages/{package_type}/{package_name}"
-}

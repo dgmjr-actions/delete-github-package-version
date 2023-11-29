@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ts-node "$( cd ${0%/*} && pwd -P)/ts/delete-github-package-version" $@
