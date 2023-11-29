@@ -35,10 +35,10 @@ runs:
   - id: Install-Node-modules
     run: npm install
     shell: pwsh
-    cwd: Scripts/ts
+    working-directory: Scripts/ts
   - id: Delete-GitHub-Package-Version
     shell: pwsh
     run: ts-node-esm delete-github-package-version.ts --org ${{ inputs.organization }} --package-id ${{ inputs.package-name }} --version "${{ inputs.package-version }}" --type ${{ inputs.package-type }} --token ${{ inputs.git-token }}
-    cwd: Scripts/ts
+    working-directory: Scripts/ts
     env:
       GITHUB_TOKEN: ${{ inputs.git-token }}
