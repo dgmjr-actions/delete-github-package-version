@@ -6,3 +6,4 @@ import * as github_cli_types from "./github-cli-types.js";
 export { github_cli_types };
 import * as github_cli from "./github-cli.js";
 export { github_cli };
+export const foo = "foo";
