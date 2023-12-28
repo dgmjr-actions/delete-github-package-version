@@ -3,8 +3,8 @@ author: David G. Moore, Jr., <david@dgmjr.io>
 description: Deletes a version of a package from the GitHub Package Registry
 
 branding:
-  icon: git-merge
-  color: green
+  icon: delete
+  color: red
 
 inputs:
   repo:
