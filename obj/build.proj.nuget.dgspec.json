@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/david/GitHub/dgmjr-actions/delete-github-package-version/build.proj": {}
+  },
+  "projects": {
+    "/Users/david/GitHub/dgmjr-actions/delete-github-package-version/build.proj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/david/GitHub/dgmjr-actions/delete-github-package-version/build.proj",
+        "projectName": "build",
+        "projectPath": "/Users/david/GitHub/dgmjr-actions/delete-github-package-version/build.proj",
+        "packagesPath": "/Users/david/.nuget/packages/",
+        "outputPath": "/Users/david/GitHub/dgmjr-actions/delete-github-package-version/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/david/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard1.0"
+        ],
+        "sources": {
+          "/Users/david/.nuget/packages": {},
+          "/Users/david/Downloads/": {},
+          "/usr/local/share/PackageManagement/NuGet/Packages/": {},
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dgmjr.pkgs.visualstudio.com/dgmjr-io/_packaging/dgmjr-io/nuget/v3/index.json": {},
+          "https://f.feedz.io/dgmjr-io/dgmjr-io/nuget/index.json": {},
+          "https://nuget.pkg.github.com/dgmjr-io/index.json": {},
+          "https://www.nuget.org/api/v2": {},
+          "https://www.powershellgallery.com/api/v2": {}
+        },
+        "frameworks": {
+          "netstandard1.0": {
+            "targetAlias": "netstandard1.0",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "netstandard1.0": {
+          "targetAlias": "netstandard1.0",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

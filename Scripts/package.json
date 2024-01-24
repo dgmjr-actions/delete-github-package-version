@@ -12,8 +12,7 @@
   "description": "A TypeScript library, which allows deleting from GitHub packages",
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
-    "@types/semver": "^7.5.3",
-    "@types/yargs": "^17.0.28"
+    "@types/semver": "^7.5.3"
   },
   "keywords": [
     "github",
@@ -27,8 +26,9 @@
     "url": "https://github.com/dgmjr-io/NuGetPush.git"
   },
   "scripts": {
-    "build": "npm install --registry https://registry.npmjs.org; tsc",
-    "uninstall": "npm uninstall github-packages-push",
+    "install-deps": "npm install --registry https://registry.npmjs.orgs",
+    "build": "tsc",
+    "uninstall": "npm uninstall @dgmjr/github-packages-push",
     "watch-ts": "tsc --watch",
     "clean": "rm -rf node_modules;rm -rf js;rm -rf **/*.js"
   },
@@ -37,7 +37,6 @@
     "@tsconfig/node16": "^16.1.1",
     "form-data": "^4.0.0",
     "npm-cli-login": "^1.0.0",
-    "octokit": "^2.0.14",
-    "yargs": "^17.7.2"
+    "octokit": "^2.0.14"
   }
 }

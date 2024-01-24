@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+    <PropertyGroup>
+        <TargetFramework>netstandard1.0</TargetFramework>
+    </PropertyGroup>
+    <Target Name="BuildPackage" BeforeTargets="Build">
+        <Exec Command="cd Scripts &amp;&amp; npm run-script install-deps" />
+        <Exec Command="cd Scripts &amp;&amp; npm run build" />
+    </Target>
+</Project>
